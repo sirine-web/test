@@ -31,7 +31,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run automated tests with pytest
         run: |
-          pytest tests/
+          pytest -v
 
 
   deployment:
