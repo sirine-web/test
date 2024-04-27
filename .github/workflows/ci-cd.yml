@@ -28,14 +28,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          echo "Installing test dependencies..."
-          # Exemple de commande fictive pour l'installation des dépendances de test
-          pip install pytest
-      - name: Run automated tests
+          pip install -r requirements.txt
+      - name: Run automated tests with pytest
         run: |
-          echo "Running automated tests..."
-          # Exemple de commande fictive pour l'exécution des tests automatisés
-          pytest
+          pytest tests/
+
 
   deployment:
     name: Deployment
